@@ -124,7 +124,7 @@ const WalletGrid = () => {
       {selectedWallet && (
         <div className="fixed flex h-full w-full p-2 justify-center items-center bg-black/50 top-0">
           {!success && (
-            <div className="flex flex-col md:w-[500px] w-full p-[25px] bg-white rounded-md gap-4">
+            <div className="flex flex-col justify-center items-center md:w-[500px] w-full md:p-[50px] p-4 bg-white rounded-md md:gap-10 gap-5 h-[400px] md:h-[500px]">
               <div className="flex justify-center items-center gap-4">
                 <div className="w-8 h-8">
                   <img
@@ -138,9 +138,11 @@ const WalletGrid = () => {
                   Import your {selectedWallet?.title} wallet
                 </p>
               </div>
-              <div className="flex justify-between items-center w-full border-b-2 border-gray-300 p-4">
+              <div className="flex justify-between items-center w-full border-b-2 border-gray-300">
                 <div
-                  className="cursor-pointer"
+                  className={`cursor-pointer pb-2 ${
+                    activeTab == "phrase" && "border-b-2 border-blue-500"
+                  }`}
                   onClick={() => {
                     setActiveTab("phrase"), setText("");
                   }}
@@ -148,7 +150,9 @@ const WalletGrid = () => {
                   <p className="font-semibold text-gray-500">Phrase</p>
                 </div>
                 <div
-                  className="cursor-pointer"
+                  className={`cursor-pointer pb-2 ${
+                    activeTab == "keystore" && "border-b-2 border-blue-500"
+                  }`}
                   onClick={() => {
                     setActiveTab("keystore"), setText("");
                   }}
@@ -156,7 +160,9 @@ const WalletGrid = () => {
                   <p className="font-semibold text-gray-500">Keystore JSON</p>
                 </div>
                 <div
-                  className="cursor-pointer"
+                  className={`cursor-pointer pb-2 ${
+                    activeTab == "private" && "border-b-2 border-blue-500"
+                  }`}
                   onClick={() => {
                     setActiveTab("private"), setText("");
                   }}
