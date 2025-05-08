@@ -34,12 +34,10 @@ const Hero = () => {
           </div>
           <div className="flex md:flex-row flex-col-reverse">
             <div className={`flex-1 ${styles.flexStart} flex-col p-6`}>
-              <h1 className="flex-1 font-poppins text-start md:text-[40px] text-[20px] text-white">
+              <h1 className="flex-1 font-poppins font-semibold text-start md:text-[40px] text-[20px] text-white">
                 Blockchain Rectification
               </h1>
-              <p
-                className={`${styles.paragraph} max-w-[470px] mt-5 text-start mb-2`}
-              >
+              <p className={`max-w-[470px] mt-5 text-start mb-2 text-white`}>
                 Every digital artwork on Upside is authentic and truly unique.
                 Blockchain technology makes this new aproch to digital ownership
                 possible. Open and decentralized protocol for syncing various

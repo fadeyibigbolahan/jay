@@ -152,7 +152,7 @@ const CryptoItem = ({ name, symbol, img, price, change, loading }) => (
         </>
       ) : (
         <>
-          <p className="text-xs font-bold">${price}</p>
+          <p className="text-xs font-bold">${price.toFixed(2)}</p>
           <p className="flex items-center justify-center text-xs text-green-500 font-bold">
             <FaCaretUp />
             {change}
